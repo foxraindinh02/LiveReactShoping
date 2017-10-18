@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import { StackNavigator, TabNavigator, DrawerNavigator } from 'react-navigation';
 
 import Authentication from './Authentication/Authentication';
 import ChangeInfo from './ChangeInfo/ChangeInfo';
@@ -59,4 +59,17 @@ export const Tabbar = TabNavigator({
     tabBarPosition: 'bottom',
     swipeEnabled: true
 }
+);
+
+//Drawer 
+export const SideMenu = DrawerNavigator({
+    Tab: {
+        screen: Tabbar
+    },
+},
+    {
+        drawerWidth: 230,
+        drawerPosition: 'left',
+        contentComponent: props => <OrderHistory {...props} />
+    }
 );

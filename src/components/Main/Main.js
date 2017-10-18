@@ -14,15 +14,23 @@ export default class Main extends Component {
         >
           <Text>Go to Authentication</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
           onPress={() => this.props.navigation.navigate('OrderHistory_Screen')}
         >
           <Text>Go to OrderHistory</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
           onPress={() => this.props.navigation.navigate('ChangeInfo_Screen')}
         >
           <Text>Go to ChangeInfo</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={{ backgroundColor: 'red' }}
+          onPress={() => this.props.navigation.navigate('DrawerOpen')}
+        >
+          <Text style={{ color: '#fff', fontSize: 20, padding: 10 }}>Go to Menu</Text>
         </TouchableOpacity>
       </View>
 

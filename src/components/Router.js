@@ -42,6 +42,21 @@ export const HomeStack = StackNavigator({
 //Tabbar
 export const Tabbar = TabNavigator({
     Home: {
-        screen: HomeStack
-    }
-});
+        screen: HomeStack,
+        navigationOptions: {
+            title: "Home"
+        },
+    },
+},
+{
+    tabBarOptions: {
+        style: {
+            backgroundColor: '#2C2C2C'
+        },
+        activeTintColor: '#FFFFFF',
+        inactiveTintColor: '#F8B433'
+    },
+    tabBarPosition: 'bottom',
+    swipeEnabled: true
+}
+);

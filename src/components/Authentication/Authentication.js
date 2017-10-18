@@ -11,6 +11,7 @@ export default class Authentication extends Component {
         >
           <Text>Go Back To Main</Text>
         </TouchableOpacity>
+        <Text>{this.props.navigation.state.params.param}</Text>
       </View>
     );
   }

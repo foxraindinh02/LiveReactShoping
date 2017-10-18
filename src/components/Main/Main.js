@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 
 export default class Main extends Component {
+  // static navigationOptions = {
+  //   title: 'Home'
+  // }
   render() {
     return (
       <View style={{ flex:1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#9C994C' }}>
         <Text>Main Screen</Text>
         <TouchableOpacity
-          onPress={() => this.props.navigation.navigate('Authentication_Screen')}
+          onPress={() => this.props.navigation.navigate('Authentication_Screen', {param: 'Ngoc Dinh'})}
         >
           <Text>Go to Authentication</Text>
         </TouchableOpacity>

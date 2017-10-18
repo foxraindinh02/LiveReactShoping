@@ -4,12 +4,12 @@ import { Text,View, TouchableOpacity } from 'react-native';
 export default class Authentication extends Component {
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: '#fff', justifyContent: 'center', alignItems: 'center' }}>
+      <View style={{ flex: 1, backgroundColor: '#F09F00' }}>
         <Text>Authentication Component</Text>
-        <TouchableOpacity style={{backgroundColor: 'green'}}
+        <TouchableOpacity
           onPress={() => { this.props.navigation.goBack() }}
         >
-          <Text style={{ color: '#fff', fontSize: 20, padding: 10}}>Go Back</Text>
+          <Text>Go Back To Main</Text>
         </TouchableOpacity>
       </View>
     );

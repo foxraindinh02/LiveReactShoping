@@ -25,15 +25,16 @@ export const Home = StackNavigator({
   },
   OrderHistory_Screen: {
     screen: OrderHistory,
-  },
-})
+  }
+});
 
 export default class App extends Component {
   render() {
     return (
-      <View>
+      <View style={{ flex: 1, backgroundColor: '#F3F3F3', justifyContent: 'center', alignItems: 'center' }}>
         <Home />
       </View>
     );
   }
 }
+

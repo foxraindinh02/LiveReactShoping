@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { StackNavigator, TabNavigator, DrawerNavigator } from 'react-navigation';
 
 import Authentication from './Authentication/Authentication';
 import ChangeInfo from './ChangeInfo/ChangeInfo';
 import Main from './Main/Main';
 import OrderHistory from './OrderHistory/OrderHistory';
+
+// Hiding the header for all the screen
+// headerMode: 'none'
+// Hiding the header for a specific screen
+// static navigationOptions = { header: null };
 
 // List screens
 export const HomeStack = StackNavigator({
@@ -36,6 +41,7 @@ export const HomeStack = StackNavigator({
 },
     {
         initialRouteName: 'Main_Screen',
+        headerMode: 'none'
     }
 );
 
@@ -64,8 +70,17 @@ export const Tabbar = TabNavigator({
 //Drawer 
 export const SideMenu = DrawerNavigator({
     Tab: {
-        screen: Tabbar
-    },
+        screen: Tabbar,
+        navigationOptions: {
+            drawerLabel: 'Home',
+            drawerIcon: ({ tintColor }) => (
+              <Image
+                source={require('../../src/menu.png')}
+                style={[styles.icon, {tintColor: tintColor}]}
+              />
+            ),
+          }
+    }
 },
     {
         drawerWidth: 230,

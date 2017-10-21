@@ -7,7 +7,7 @@ export default class OrderHistory extends Component {
       <View style={{ flex: 1, backgroundColor: '#007ACC' }}>
         <Text>OrderHistory Component</Text>
         <TouchableOpacity
-          onPress={() => { this.props.navigation.goBack() }}
+          onPress={() => { this.props.navigation.goBack('Main_Screen') }}
         >
           <Text>Go Back To Main</Text>
         </TouchableOpacity>
